@@ -1,0 +1,9 @@
+hello world
+hello world
+./hello.sh: 줄 5: fasdf: 명령어를 찾을 수 없음
+./hello.sh: 줄 1: this is my file: 명령어를 찾을 수 없음
+hello world
+./hello.sh: 줄 5: fasdf: 명령어를 찾을 수 없음
+./hello.sh: 줄 1: this is my file: 명령어를 찾을 수 없음
+hello world
+./hello.sh: 줄 5: fasdf: 명령어를 찾을 수 없음

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+printf "hello this is a printf script"
+printf "this computer is $user document"

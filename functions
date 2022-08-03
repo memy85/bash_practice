@@ -1,0 +1,27 @@
+#!/bin/bash
+
+
+function my_func(){
+    echo "this is my function"
+    return 
+    }
+
+function my_func2(){
+        echo "this my_func2"
+        echo "this is input $1"
+        return
+    }
+my_func2 "wonseok"
+
+# Shell function demo
+
+function funct {
+    echo "step 2"
+    return 
+}
+
+# main function starts here
+# echo "step 1"
+# funct
+# echo "step 3"
+

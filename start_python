@@ -1,0 +1,7 @@
+#!/bin/bash
+
+python3 hello.py &
+python3 hello.py &
+
+echo "finished" 
+

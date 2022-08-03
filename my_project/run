@@ -1,0 +1,26 @@
+#!/bin/bash
+
+function return:user {
+    echo "I am $(whoami)"
+    return $whoami
+}
+
+
+function cmd {
+    echo "this function works"
+    echo "$calendar"
+    usr=return:user
+    echo "the user is $usr"
+    }
+
+function print:my_name {
+    echo "this is your name : $(whoami) "
+    return:user
+}
+
+function update {
+    sudo pacman -Syyu
+}
+
+
+"$@"
