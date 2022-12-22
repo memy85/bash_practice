@@ -1,0 +1,15 @@
+#!/bin/bash
+# This will tell the shell(Whatever shell it is), to get the bash shell.
+# Thus, this script will always work in a bash
+
+# bashscripts don't really require .sh 
+# how do we know if its the bashscript?
+# using a #!/bin/bash
+
+echo "Hello world!"
+
+echo "My current working directory is:"
+pwd
+
+
+# We would also want to make the script more complex

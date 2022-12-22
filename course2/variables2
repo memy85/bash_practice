@@ -1,0 +1,14 @@
+#!/bin/bash
+
+name="Won Seok Jang"
+now=$(date)
+
+echo "Hello $name"
+echo "The system time and date is:"
+echo $now
+echo "Your username is: $USER" 
+
+# here $USER is the global variable in the shell. We call this system variable
+# when your making a variable with a lower case variable, it tells other programmers that you're refering to a custom variable
+
+env # shows the environment variables

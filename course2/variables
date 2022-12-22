@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# variables allows us to save information
+# myname="Wonseok"
+# myage=30
+
+# echo "Hello my name is $myname" # you should put a dollar sign in the front. Double quotation allows the echo command read the variables
+# echo 'Hello, my name is $myname.' # This will echo $myname
+# echo "I am $myage years old"
+# echo 'I am $myage years old'
+
+
+# If you make a variable same to a command, it tells the shell that it is a variable.
+# The variables are bound to a session. 
+
+# word="awesome"
+# word="fun"
+
+# echo "Linux is $word"
+# echo "Videgames are $word"
+# echo "Sunny days are $word"
+
+files=$(pwd) # This is a subshell. The output of $ls is saved to files
+now=$(date)
+
+echo $files # print the output of the ls commands
+echo "right now time is $now"
