@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# you should tell the bash that you want to calculate using expr
+echo "30 + 40 is $(expr 30 + 40)" 
+echo "30 - 40 is $(expr 30 - 40)" 
+echo "30 % 40 is $(expr 30 % 40)" 
+echo "30 / 40 is $(expr 30 / 40)" 
+echo "30 * 40 is $(expr 30 \* 40), you have to do \*"
+
+
+myname=100
+echo "my name is $myname"
+echo "myname + 50 is $(expr $myname + 50)"
