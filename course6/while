@@ -1,0 +1,10 @@
+#!/bin/bash
+
+myvar=1
+
+while [ $myvar -le 10 ] # less than or equal to 
+do
+    echo $myvar
+    myvar=$(( $myvar +1 )) # add 1 to myvar
+    sleep 0.5 # sleep for 0.5 seconds
+done

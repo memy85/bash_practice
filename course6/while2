@@ -1,0 +1,14 @@
+#!/bin/bash
+
+myvar=1
+
+while [ -f ~/testfile ]
+do 
+    echo "As of $(date), The test file exists."
+    sleep 5 # give a 5 second delay
+done
+
+echo "As of $(date), The file no longer exists."
+# if you erase the tesfile th e loop will finish
+# the time will be logged as time passes by
+# you can know when the file is deleted
