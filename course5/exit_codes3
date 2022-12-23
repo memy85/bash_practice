@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Hello world!"
+echo $? # always echos 0
+
+
+sudo pacman -S notexist
+# exit "success" # this does not work. It should be numeric
+exit 10
+echo $? # This does not print 
+# because the upper line exits with exit code 10
+# but if you check the exit code, it becomes 199

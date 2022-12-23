@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# exit codes allow us to know whether a bash command was successful or not
+# ls -l /misc
+# successful returns 0, unsuccessful returns 1 or 2
+
+# why do we need an exit code?
+# we want the code to work automatically
+
+package=notexist
+sudo pacman -S $package >> package_install_results.log # save the output to a log file
+
+if [ $? -eq 0 ] #save the output of the previous command in $?
+then 
+    echo "The installation of $package was successful."
+    echo "The new command is available here:"
+    which $package
+else 
+    echo "$package failed to install." >> package_install_failure.log # if it fails the echo will write it to the file
+fi

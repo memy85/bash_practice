@@ -1,0 +1,15 @@
+#!/bin/bash
+
+directory=/notexist
+
+if [ -d $directory ] # check if the directory exists
+then 
+    echo $? # exit code 1
+    echo "The directory $directory exists" # exit code 0
+else 
+    echo $? # exit code 1
+    echo "The directory $directory doesn't exist" # exit code 0. 
+fi 
+echo "The exit code for this script is $?" # This will always print 0 
+# You should not put $? in the last line
+
