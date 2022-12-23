@@ -1,0 +1,34 @@
+#!/bin/bash
+
+mynum=20
+
+if [ $mynum -eq 200 ] # you should write the condition statement
+then 
+    echo "The condition is true."
+else # use else to make another condition
+    echo "The condition is not met"
+fi
+
+
+if [ $mynum == 200 ]  
+then 
+    echo "this does work"
+else 
+    echo "this does work too"
+fi
+
+# How to combine two if statements to one
+# you should think of efficiency and compactness
+
+
+if [ ! $mynum == 200 ]  # ! negates the condition
+# if [ $mynum -ne 200 ] is possilbe too
+then 
+    echo "this does work"
+else 
+    echo "this does work too"
+fi
+
+# other possible comparison operator : -gt (greater than)
+
+

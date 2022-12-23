@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# check file exists
+# -f stands for file
+if [ -f ~/myfile ] 
+then   
+    echo "The file does exist"
+    # it echos if the file exists in path
+else 
+    echo "The file does not exist"
+fi
+
+
+command=/usr/bin/htop 
+# we execute htop with a variable named command
+
+if [ -f $command ]
+then 
+    echo "$command is available, let's run it ..."
+else 
+    echo "$command is NOT available, installing it ..."
+    sudo pacman -S htop
+    # if the htop is not available it will try installing the command
+fi

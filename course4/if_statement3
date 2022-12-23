@@ -1,0 +1,16 @@
+#!/bin/bash
+
+command=/usr/bin/htop 
+# we execute htop with a variable named command
+
+if [ -f $command ]
+then 
+    echo "$command is available, let's run it ..."
+else 
+    echo "$command is NOT available, installing it ..." 
+    sudo pacman -Syyu -y && sudo pacman -S -y htop
+    # if the pacman -Syyu is successful, the second command will execute
+    # if the htop is not available it will try installing the command
+fi
+
+$command # it will run htop after installing it 
