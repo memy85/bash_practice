@@ -1,14 +1,17 @@
 #!/bin/bash
 
-command=/usr/bin/htop 
+command=htop 
 # we execute htop with a variable named command
 
-if [ -f $command ]
+if command -v $command 
+# The brackets are gone! 
+# command -v checks the existence of a command,
+# the brackets tests the command in a testing command line
 then 
     echo "$command is available, let's run it ..."
 else 
     echo "$command is NOT available, installing it ..." 
-    sudo pacman -Syyu -y && sudo pacman -S -y htop
+    sudo pacman -Syyu -y && sudo pacman -S -y $command
     # if the pacman -Syyu is successful, the second command will execute
     # if the htop is not available it will try installing the command
 fi
