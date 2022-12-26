@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# you should move this script to /usr/local/bin 
+# Then you can use this script anywhere
+# You can also erase the file extension
+
+release_file=/etc/os-release
+
+if grep -q "Manjaro" $release_file || grep -q "Arch" $release_file
+# || means or, && means and 
+# This searches for the Manjaro word in the relase file
+then 
+	# The host is based on Arch, run the pacman update command
+	sudo pacman -Syu
+fi
+
+if grep -q "Ubuntu" $release_file
+then 
+	sudo apt update
+	sudo apt dist-upgrade
+fi
