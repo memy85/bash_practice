@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# the third data stream is std input
+
+echo "Please enter your name:"
+# read command takes the input and saves it to myname
+read myname
+echo "My name is $myname"
+
+# this way, you need to give an argument in the first place
+my_new_name=$1
+echo "My new name is $my_new_name"
