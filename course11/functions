@@ -1,0 +1,32 @@
+#!/bin/bash
+
+release_file=/etc/os-release
+logfile=/var/log/updater.log
+errorlog=/var/log/updater_errors.log
+
+# we make a function
+check_exit_status() {
+    if [ $? -ne 0 ]
+    then 
+        echo "An error occurred, please check the $errorlog file."
+    else
+        echo "Successfully done!"
+    fi
+}
+
+
+if grep -q "Arch" $release_file || grep -q "Manjaro" $release_file
+then 
+    sudo pacman -Syu -y 1>>$logfile 2>>$errorlog
+    # we call the function here
+    check_exit_status
+
+    # if [ $? -ne 0 ]
+    # then 
+    #     echo "An error occurred, please check the $errorlog file."    
+    
+    # else 
+    #     echo "Successfully done!"
+    # fi
+
+fi
