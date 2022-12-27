@@ -1,0 +1,24 @@
+#!/bin/bash
+
+echo "What is your favorite Linux distribution?"
+
+echo "1 - Arch"
+echo "2 - CentOS"
+echo "3 - Debian"
+echo "4 - Mint"
+echo "5 - Ubuntu"
+echo "6 - Something else ..."
+
+read distro
+
+# this will return the number that the user entered
+# you should put ;; in the end of the statements except the last option
+case $distro in 
+    1) echo "Arch is rolling release.";;
+    2) echo "Centos is popular on servers.";;
+    3) echo "Debian is a community distribution.";;
+    4) echo "Mint is popular on both servers and computers.";;
+    5) echo "Ubuntu is popular on both servers and computers.";;
+    6) echo "There are many distributions out there.";;
+    *) echo "you didn't enter an appropriate choice" # the user selected something that doesn't match anything
+esac
