@@ -25,7 +25,7 @@ current_date=$(date +%Y-%m-%d)
 rsync_options="-avb --backup-dir $2/$current_date --delete"
 # a : archive mode, v : verbose, b : don't override the file
 # backup-dir : argument for the backup directory($2) with the current date($current_date)
-# delete : 
+# delete : This option saves the files that has the same name. It will put the original file in the backup directory
 # dry run : it does not copy anythin to anywhere. This is a demo run. If you letting this script out, remove the --dry-run
 
 $(which rsync) $rsync_options $1 $2/$current_date >> backup_$current_date.log
